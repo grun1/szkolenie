@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-move-list-item',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./move-list-item.component.css']
 })
 export class MoveListItemComponent implements OnInit {
+
+  @Input() movie =  null;
 
   constructor() { }
 
