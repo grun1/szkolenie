@@ -11,6 +11,7 @@ import { PageContactComponent } from './pages/page-contact/page-contact.componen
 import { MoveListComponent } from './components/move-list/move-list.component';
 import { MoveListItemComponent } from './components/move-list-item/move-list-item.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MenuComponent } from './components/menu/menu.component';
     PageContactComponent,
     MoveListComponent,
     MoveListItemComponent,
-    MenuComponent
+    MenuComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
