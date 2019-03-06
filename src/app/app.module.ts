@@ -10,6 +10,7 @@ import { PageMovieListComponent } from './pages/page-movie-list/page-movie-list.
 import { PageContactComponent } from './pages/page-contact/page-contact.component';
 import { MoveListComponent } from './components/move-list/move-list.component';
 import { MoveListItemComponent } from './components/move-list-item/move-list-item.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MoveListItemComponent } from './components/move-list-item/move-list-ite
     PageMovieListComponent,
     PageContactComponent,
     MoveListComponent,
-    MoveListItemComponent
+    MoveListItemComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
