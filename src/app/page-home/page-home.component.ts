@@ -15,6 +15,11 @@ export class PageHomeComponent  {
       return null;
     }
 
+    if(typeof(b) != 'number'){
+      return null;
+    }
+
+
     return a+b;
   }
 
