@@ -8,8 +8,8 @@ import { JumbotronDirective } from './directives/jumbotron.directive';
 import { HideMeDirective } from './directives/hide-me.directive';
 import { PageMovieListComponent } from './pages/page-movie-list/page-movie-list.component';
 import { PageContactComponent } from './pages/page-contact/page-contact.component';
-import { MoveListComponent } from './components/move-list/move-list.component';
-import { MoveListItemComponent } from './components/move-list-item/move-list-item.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { MovieListItemComponent } from './components/movie-list-item/movie-list-item.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
@@ -21,8 +21,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     HideMeDirective,
     PageMovieListComponent,
     PageContactComponent,
-    MoveListComponent,
-    MoveListItemComponent,
+    MovieListComponent,
+    MovieListItemComponent,
     MenuComponent,
     PageNotFoundComponent
   ],
