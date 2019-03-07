@@ -29,7 +29,11 @@ export const routes: Routes = [
       component: PageContactComponent
     },
     {
-      path: '##',
+      path: 'user',
+      loadChildren: '../user/user.module#UserModule'
+    },
+    {
+      path: '**',
       component: PageNotFoundComponent
     }
   ];
