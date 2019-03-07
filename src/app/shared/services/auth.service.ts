@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { LocalStorageService } from './local-storage.service';
 import { Status } from '../interfaces/status';
 import { User } from '../interfaces/user';
+import { resolve } from 'url';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
  
 
   constructor(
@@ -90,5 +92,10 @@ export class AuthService {
     });
   }
 
-
+  destroySession(): any {
+    return new Promise((resolve) =>{
+      this.localStorage.remove('logged-user');
+      setTimeout(resolve,200)
+    });
+  }
 }
