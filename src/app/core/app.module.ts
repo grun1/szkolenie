@@ -15,6 +15,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { PageMovieProfileComponent } from './pages/page-movie-profile/page-movie-profile.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { VideoPlayerComponent } from './components/video-player/video-player.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
 
   ],
   providers: [],

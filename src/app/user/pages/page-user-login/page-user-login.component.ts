@@ -9,7 +9,7 @@ export class PageUserLoginComponent implements OnInit {
 
   constructor() { }
 
-  user={
+  user = {
     email: null,
     password: null
   }
