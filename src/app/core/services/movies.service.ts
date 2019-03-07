@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { MovieList } from '../interfaces/movie-list.interface';
+import { MovieList } from 'src/app/core/interfaces/movie-list.interface';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

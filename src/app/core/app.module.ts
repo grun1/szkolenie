@@ -30,6 +30,7 @@ import { VideoPlayerComponent } from './components/video-player/video-player.com
     PageNotFoundComponent,
     PageMovieProfileComponent,
     VideoPlayerComponent,
+
   ],
   imports: [
     BrowserModule,
