@@ -9,7 +9,16 @@ export class PageUserLoginComponent implements OnInit {
 
   constructor() { }
 
+  user={
+    email: null,
+    password: null
+  }
+
   ngOnInit() {
+  }
+
+  handleSubmit(){
+    console.log(this.user.email);
   }
 
 }
