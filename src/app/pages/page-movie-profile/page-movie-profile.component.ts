@@ -21,4 +21,5 @@ export class PageMovieProfileComponent implements OnInit {
     this.movie = await this.movieServices.fetchMovieById(movieId);
   }
 
+
 }

@@ -1,0 +1,11 @@
+<video
+  [src]="movieUrl"
+  [poster]="movie.thumb_url"
+  #player
+  >
+</video>
+  <div class="btn-group btn-group-toogle d-block">
+  <button class="btn btn-secondary" (click)="player.play()" type="submit">PLAY</button>
+  <button class="btn btn-secondary" (click)="player.pause()" type="submit">PAUSE</button>
+  <button class="btn btn-secondary" (click)="fullscreen()" type="submit">FULLSCREEN</button>
+</div>

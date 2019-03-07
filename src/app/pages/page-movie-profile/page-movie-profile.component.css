@@ -1,0 +1,8 @@
+video{
+    width:300px;
+}
+
+app-video-player{
+    width:300px;
+    display: inline-block;
+}

@@ -17,11 +17,7 @@ export class MovieListItemComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    setTimeout(() =>
-    {
-      this.movie.rate=10;
-      this.changeDetector.markForCheck();
-    })
+  
   }
 
   redirectMovieProfile(){
