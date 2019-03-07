@@ -850,6 +850,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
 
 
 
@@ -858,7 +860,7 @@ var MoviesService = /** @class */ (function () {
         this.http = http;
     }
     MoviesService.prototype.fetchMovies = function () {
-        return this.http.get('/assets/movies.json').toPromise();
+        return this.http.get(src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].moviesUrl).toPromise();
     };
     MoviesService.prototype.fetchMovieById = function (movieId) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
@@ -902,7 +904,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    moviesUrl: '/assets/movies.json'
 };
 /*
  * For easier debugging in development mode, you can import the following file
