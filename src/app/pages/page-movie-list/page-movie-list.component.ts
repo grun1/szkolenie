@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from 'src/app/services/movies.service';
+import { MovieList } from 'src/app/interfaces/movie-list.interface';
 
 @Component({
   selector: 'app-page-movie-list',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageMovieListComponent implements OnInit {
 
-  constructor() { }
+  movies: MovieList = null;
 
-  ngOnInit() {
+  constructor(
+    private movieServices: MoviesService
+  ) { }
+
+  async ngOnInit() {
+    this.movies = await this.movieServices.fetchMovies();
   }
 
 }

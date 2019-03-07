@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -12,6 +13,7 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { MovieListItemComponent } from './components/movie-list-item/movie-list-item.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { PageMovieProfileComponent } from './pages/page-movie-profile/page-movie-profile.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,14 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     MovieListComponent,
     MovieListItemComponent,
     MenuComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PageMovieProfileComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

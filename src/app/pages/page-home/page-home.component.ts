@@ -1,4 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { MoviesService } from 'src/app/services/movies.service';
+import { MovieList } from 'src/app/interfaces/movie-list.interface';
 
 @Component({
   selector: 'app-page-home',
@@ -7,7 +9,15 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class PageHomeComponent  {
 
-  constructor() { }
+  movies: MovieList = null;
+
+  constructor(
+    private moviesService: MoviesService
+  ) { }
+
+  async ngOnInit() {
+    this.movies = await this.moviesService.fetchPromoMovies();
+  }
 
   addNumbers(a,b){
 
