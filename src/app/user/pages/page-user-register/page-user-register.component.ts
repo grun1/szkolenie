@@ -9,6 +9,8 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 })
 export class PageUserRegisterComponent implements OnInit {
 
+  isRegistrationSuccess = false;
+
   registerForm = new FormGroup (
     {
       email: new FormControl(),
@@ -30,10 +32,12 @@ export class PageUserRegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleSubmit(){
+  async handleSubmit(){
     const formData = this.registerForm.getRawValue();
-    const status =  this.auth.register(formData);
-    console.log(formData);
+    const status =  await this.auth.register(formData);
+    if(status.status === 'ok'){
+      this.isRegistrationSuccess = true;
+    }
   }
 
 }

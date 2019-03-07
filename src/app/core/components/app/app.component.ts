@@ -9,8 +9,6 @@ export class AppComponent {
   title = 'movies';
 
   constructor(){
-    console.log(1);
-    console.log(2);
-    console.log(3);
+    
   }
 }

@@ -1,4 +1,9 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+
+
+import { filter } from 'rxjs/operators';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,9 +14,32 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  isLoggedUser = false;
+  loggerUserName ='';
+
+  constructor(
+    private router: Router,
+    private auth: AuthService
+  ) { }
+
 
   ngOnInit() {
+    this.router.events
+      .pipe(
+        filter((event)=> event instanceof NavigationEnd)
+      )
+      .subscribe(this.verifyLoggedUser.bind(this));
+  }
+
+  async verifyLoggedUser(){
+    console.log('asdas');
+    try{
+      await this.auth.isLoggedUser();
+      this.isLoggedUser = true;
+      this.loggerUserName = await this.auth.getLoggedUserName();
+    }catch(err){
+      this.isLoggedUser = false;
+    }
   }
 
 }

@@ -25,7 +25,6 @@ export class MovieListItemComponent implements OnInit {
   }
 
   buildRate(){
-    console.log(new Date);
    return this.movie.rate*10 + '%'
   }
 

@@ -1,6 +1,11 @@
+<div class="alert alert-success" role="alert" *ngIf="isRegistrationSuccess">
+    OK utworzono
+  </div>
+
 <form
   (ngSubmit) ="handleSubmit()"
-  [formGroup] = "registerForm">
+  [formGroup] = "registerForm"
+  *ngIf="!isRegistrationSuccess">
     <div class="form-group">
       <label>Email</label>
       <input type="email"
@@ -25,11 +30,10 @@
           class="form-control"
           name="confirmPassword"
           formControlName="confirmPassword"
-
         >
         <small class="form-text text-muted text-danger"></small>
     </div>
-    <div [formGroup]="person">
+    <div formGroupName="person">
       <div class="form-group">
           <label>User name</label>
           <input type="text"
