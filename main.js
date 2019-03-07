@@ -119,8 +119,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _directives_hide_me_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directives/hide-me.directive */ "./src/app/directives/hide-me.directive.ts");
 /* harmony import */ var _pages_page_movie_list_page_movie_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/page-movie-list/page-movie-list.component */ "./src/app/pages/page-movie-list/page-movie-list.component.ts");
 /* harmony import */ var _pages_page_contact_page_contact_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/page-contact/page-contact.component */ "./src/app/pages/page-contact/page-contact.component.ts");
-/* harmony import */ var _components_move_list_move_list_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/move-list/move-list.component */ "./src/app/components/move-list/move-list.component.ts");
-/* harmony import */ var _components_move_list_item_move_list_item_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/move-list-item/move-list-item.component */ "./src/app/components/move-list-item/move-list-item.component.ts");
+/* harmony import */ var _components_movie_list_movie_list_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/movie-list/movie-list.component */ "./src/app/components/movie-list/movie-list.component.ts");
+/* harmony import */ var _components_movie_list_item_movie_list_item_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/movie-list-item/movie-list-item.component */ "./src/app/components/movie-list-item/movie-list-item.component.ts");
 /* harmony import */ var _components_menu_menu_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/menu/menu.component */ "./src/app/components/menu/menu.component.ts");
 /* harmony import */ var _pages_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/page-not-found/page-not-found.component */ "./src/app/pages/page-not-found/page-not-found.component.ts");
 
@@ -149,8 +149,8 @@ var AppModule = /** @class */ (function () {
                 _directives_hide_me_directive__WEBPACK_IMPORTED_MODULE_7__["HideMeDirective"],
                 _pages_page_movie_list_page_movie_list_component__WEBPACK_IMPORTED_MODULE_8__["PageMovieListComponent"],
                 _pages_page_contact_page_contact_component__WEBPACK_IMPORTED_MODULE_9__["PageContactComponent"],
-                _components_move_list_move_list_component__WEBPACK_IMPORTED_MODULE_10__["MoveListComponent"],
-                _components_move_list_item_move_list_item_component__WEBPACK_IMPORTED_MODULE_11__["MoveListItemComponent"],
+                _components_movie_list_movie_list_component__WEBPACK_IMPORTED_MODULE_10__["MovieListComponent"],
+                _components_movie_list_item_movie_list_item_component__WEBPACK_IMPORTED_MODULE_11__["MovieListItemComponent"],
                 _components_menu_menu_component__WEBPACK_IMPORTED_MODULE_12__["MenuComponent"],
                 _pages_page_not_found_page_not_found_component__WEBPACK_IMPORTED_MODULE_13__["PageNotFoundComponent"]
             ],
@@ -283,105 +283,105 @@ var MenuComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/move-list-item/move-list-item.component.css":
-/*!************************************************************************!*\
-  !*** ./src/app/components/move-list-item/move-list-item.component.css ***!
-  \************************************************************************/
+/***/ "./src/app/components/movie-list-item/movie-list-item.component.css":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/movie-list-item/movie-list-item.component.css ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbW92ZS1saXN0LWl0ZW0vbW92ZS1saXN0LWl0ZW0uY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbW92aWUtbGlzdC1pdGVtL21vdmllLWxpc3QtaXRlbS5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
-/***/ "./src/app/components/move-list-item/move-list-item.component.html":
+/***/ "./src/app/components/movie-list-item/movie-list-item.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/movie-list-item/movie-list-item.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "{{ movie?.title }}\r\n\r\n<div class=\"card\" style=\"width: 18rem;\">\r\n    <img class=\"card-img-top\" src=\"{{ movie?.image }}\" alt=\"Card image cap\">\r\n    <div class=\"card-body\">\r\n      <h5 class=\"card-title\"> {{ movie?.description }} </h5>\r\n      <p class=\"card-text\"> {{ movie?.title }} </p>\r\n    </div>\r\n  </div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/movie-list-item/movie-list-item.component.ts":
 /*!*************************************************************************!*\
-  !*** ./src/app/components/move-list-item/move-list-item.component.html ***!
+  !*** ./src/app/components/movie-list-item/movie-list-item.component.ts ***!
   \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "{{ movie?.title }}\n\n<div class=\"card\" style=\"width: 18rem;\">\n    <img class=\"card-img-top\" src=\" {{ movie?.image }}\" alt=\"Card image cap\">\n    <div class=\"card-body\">\n      <h5 class=\"card-title\"> {{ movie?.description }} </h5>\n      <p class=\"card-text\"> {{ movie?.title }} </p>\n    </div>\n  </div>\n"
-
-/***/ }),
-
-/***/ "./src/app/components/move-list-item/move-list-item.component.ts":
-/*!***********************************************************************!*\
-  !*** ./src/app/components/move-list-item/move-list-item.component.ts ***!
-  \***********************************************************************/
-/*! exports provided: MoveListItemComponent */
+/*! exports provided: MovieListItemComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MoveListItemComponent", function() { return MoveListItemComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovieListItemComponent", function() { return MovieListItemComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-var MoveListItemComponent = /** @class */ (function () {
-    function MoveListItemComponent() {
+var MovieListItemComponent = /** @class */ (function () {
+    function MovieListItemComponent() {
         this.movie = null;
     }
-    MoveListItemComponent.prototype.ngOnInit = function () {
+    MovieListItemComponent.prototype.ngOnInit = function () {
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
-    ], MoveListItemComponent.prototype, "movie", void 0);
-    MoveListItemComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    ], MovieListItemComponent.prototype, "movie", void 0);
+    MovieListItemComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-move-list-item',
-            template: __webpack_require__(/*! ./move-list-item.component.html */ "./src/app/components/move-list-item/move-list-item.component.html"),
-            styles: [__webpack_require__(/*! ./move-list-item.component.css */ "./src/app/components/move-list-item/move-list-item.component.css")]
+            selector: 'app-movie-list-item',
+            template: __webpack_require__(/*! ./movie-list-item.component.html */ "./src/app/components/movie-list-item/movie-list-item.component.html"),
+            styles: [__webpack_require__(/*! ./movie-list-item.component.css */ "./src/app/components/movie-list-item/movie-list-item.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], MoveListItemComponent);
-    return MoveListItemComponent;
+    ], MovieListItemComponent);
+    return MovieListItemComponent;
 }());
 
 
 
 /***/ }),
 
-/***/ "./src/app/components/move-list/move-list.component.css":
-/*!**************************************************************!*\
-  !*** ./src/app/components/move-list/move-list.component.css ***!
-  \**************************************************************/
+/***/ "./src/app/components/movie-list/movie-list.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/components/movie-list/movie-list.component.css ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbW92ZS1saXN0L21vdmUtbGlzdC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbW92aWUtbGlzdC9tb3ZpZS1saXN0LmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
-/***/ "./src/app/components/move-list/move-list.component.html":
+/***/ "./src/app/components/movie-list/movie-list.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/movie-list/movie-list.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"d-flex justify-content-between flex-wrap\">\r\n    <app-movie-list-item *ngFor=\"let item of movieList\" [movie]=\"item\">\r\n    </app-movie-list-item>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/components/movie-list/movie-list.component.ts":
 /*!***************************************************************!*\
-  !*** ./src/app/components/move-list/move-list.component.html ***!
+  !*** ./src/app/components/movie-list/movie-list.component.ts ***!
   \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"d-flex justify-content-between flex-wrap\">\n    <app-movie-list-item *ngFor=\"let item of movieList\" [movie]=\"item\">\n    </app-movie-list-item>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/components/move-list/move-list.component.ts":
-/*!*************************************************************!*\
-  !*** ./src/app/components/move-list/move-list.component.ts ***!
-  \*************************************************************/
-/*! exports provided: MoveListComponent */
+/*! exports provided: MovieListComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MoveListComponent", function() { return MoveListComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovieListComponent", function() { return MovieListComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
-var MoveListComponent = /** @class */ (function () {
-    function MoveListComponent() {
+var MovieListComponent = /** @class */ (function () {
+    function MovieListComponent() {
         this.movieList = [
             {
                 title: 'Polski film #1',
@@ -400,17 +400,17 @@ var MoveListComponent = /** @class */ (function () {
             }
         ];
     }
-    MoveListComponent.prototype.ngOnInit = function () {
+    MovieListComponent.prototype.ngOnInit = function () {
     };
-    MoveListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    MovieListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-move-list',
-            template: __webpack_require__(/*! ./move-list.component.html */ "./src/app/components/move-list/move-list.component.html"),
-            styles: [__webpack_require__(/*! ./move-list.component.css */ "./src/app/components/move-list/move-list.component.css")]
+            selector: 'app-movie-list',
+            template: __webpack_require__(/*! ./movie-list.component.html */ "./src/app/components/movie-list/movie-list.component.html"),
+            styles: [__webpack_require__(/*! ./movie-list.component.css */ "./src/app/components/movie-list/movie-list.component.css")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], MoveListComponent);
-    return MoveListComponent;
+    ], MovieListComponent);
+    return MovieListComponent;
 }());
 
 
@@ -571,7 +571,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-move-list></app-move-list>"
+module.exports = "<app-movie-list></app-movie-list>"
 
 /***/ }),
 
