@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { httpClientTestingModule } from '@angular/common/http/http';
 
 import { PageHomeComponent } from './page-home.component';
+import { MovieListComponent } from '../../components/movie-list/movie-list.component';
+import { MovieListItemComponent } from '../../components/movie-list-item/movie-list-item.component';
 
 describe('PageHomeComponent', () => {
   let component: PageHomeComponent;
@@ -8,7 +11,8 @@ describe('PageHomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageHomeComponent ]
+      declarations: [ PageHomeComponent, MovieListComponent, MovieListItemComponent ],
+      imports: [httpClientTestingModule]
     })
     .compileComponents();
   }));

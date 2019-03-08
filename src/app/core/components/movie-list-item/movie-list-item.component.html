@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem;" *ngIf="movie">
     <img class="card-img-top" (click)="redirectMovieProfile()" src="{{ movie?.thumb_url }}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title"> {{ movie?.title }}</h5>

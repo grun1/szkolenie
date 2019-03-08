@@ -1,11 +1,13 @@
-<video
-  [src]="movieUrl"
-  [poster]="movie.thumb_url"
-  #player
-  >
-</video>
-  <div class="btn-group btn-group-toogle d-block">
-  <button class="btn btn-secondary" (click)="play()" type="submit">PLAY</button>
-  <button class="btn btn-secondary" (click)="pause()" type="submit">PAUSE</button>
-  <button class="btn btn-secondary" (click)="fullscreen()" type="submit">FULLSCREEN</button>
+<div *ngIf="movie">
+  <video
+    [src]="movieUrl"
+    [poster]="movie.thumb_url"
+    #player
+    >
+  </video>
+    <div class="btn-group btn-group-toogle d-block">
+    <button class="btn btn-secondary" (click)="play()" type="submit">PLAY</button>
+    <button class="btn btn-secondary" (click)="pause()" type="submit">PAUSE</button>
+    <button class="btn btn-secondary" (click)="fullscreen()" type="submit">FULLSCREEN</button>
+  </div>
 </div>
