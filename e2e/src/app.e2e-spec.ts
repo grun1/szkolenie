@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Movies');
+    expect(page.getTitleText()).toEqual('movies');
   });
 
   afterEach(async () => {
@@ -20,4 +20,13 @@ describe('workspace-project App', () => {
       level: logging.Level.SEVERE,
     } as logging.Entry));
   });
+
+  it('should login', () => {
+    page.navigateTo();
+    page.contactButton().click();
+    expect(page.getPageUrl()).toEqual('/contact');
+  });
+
+
+
 });

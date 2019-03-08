@@ -30,7 +30,7 @@ export class PageUserLoginComponent implements OnInit {
       await this.auth.saveLoggedUser(this.user);
 
       this.auth.saveLoggedUser(this.user);
-      this.router.navigate(['/']);
+      this.router.navigate(['/user/profile']);
     }catch(err){
       this.errorMassage = 'Złe hasło';
     }
