@@ -17,8 +17,7 @@ describe('User: Check login after registion', () => {
     page.personNameForm().sendKeys("a");
     page.personSurnameForm().sendKeys("a");
     page.submitForm().click();
-    expect(page.result().resultMessage().getText()).toContain("Dziękujemy");
-
+    expect(page.result().resultMessage().getText()).toContain("thx");
 });
 
 
