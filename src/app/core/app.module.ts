@@ -16,6 +16,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { PageMovieProfileComponent } from './pages/page-movie-profile/page-movie-profile.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { SharedModule } from '../shared/shared.module';
+import { PageAuthorsComponent } from './pages/page-authors/page-authors.component';
+import { BaseFooterComponent } from './components/base-footer/base-footer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { SharedModule } from '../shared/shared.module';
     PageNotFoundComponent,
     PageMovieProfileComponent,
     VideoPlayerComponent,
+    PageAuthorsComponent,
+    BaseFooterComponent,
 
   ],
   imports: [

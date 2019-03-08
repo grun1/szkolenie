@@ -4,6 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { User } from 'src/app/shared/interfaces/user';
 
 @Component({
   selector: 'app-menu',
@@ -15,13 +16,12 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 export class MenuComponent implements OnInit {
 
   isLoggedUser = false;
-  loggerUserName ='';
+  loggerUserName: User = null;
 
   constructor(
     private router: Router,
     private auth: AuthService
   ) { }
-
 
   ngOnInit() {
     this.router.events
@@ -32,7 +32,6 @@ export class MenuComponent implements OnInit {
   }
 
   async verifyLoggedUser(){
-    console.log('asdas');
     try{
       await this.auth.isLoggedUser();
       this.isLoggedUser = true;
