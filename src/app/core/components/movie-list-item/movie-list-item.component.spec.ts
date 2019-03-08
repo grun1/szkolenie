@@ -4,8 +4,8 @@ import { MovieListItemComponent } from './movie-list-item.component';
 import { RouterTestingModule } from '@angular/router/testing';
 
 describe('MovieListItemComponent', () => {
-  let component: MoveListItemComponent;
-  let fixture: ComponentFixture<MoveListItemComponent>;
+  let component: MovieListItemComponent;
+  let fixture: ComponentFixture<MovieListItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
