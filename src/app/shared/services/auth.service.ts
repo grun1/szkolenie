@@ -9,8 +9,6 @@ import { resolve } from 'url';
 })
 export class AuthService {
 
- 
-
   constructor(
     private localStorage: LocalStorageService
   ) { }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, EventEmitter, Output, HostBinding, HostListener, ViewChild } from '@angular/core';
 import { Movie } from 'src/app/core/interfaces/movie.interface';
 
 @Component({
@@ -9,6 +9,8 @@ import { Movie } from 'src/app/core/interfaces/movie.interface';
 export class VideoPlayerComponent implements OnInit {
 
   @Input() movie: Movie = null;
+  @Output() status = new EventEmitter();
+  @ViewChild('player') player = null;
 
   movieUrl = "https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4";
 
@@ -27,6 +29,18 @@ export class VideoPlayerComponent implements OnInit {
     }
     console.log("FullScreen");
   }
+
+play(){
+  this.player.nativeElement.play();
+  this.status.next({ status: 'playing'});
+}
+
+pause(){
+  this.player.nativeElement.pause();
+  this.status.next({ status: 'pause'});
+}
+
+
 
 
 }

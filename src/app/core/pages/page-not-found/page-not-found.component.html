@@ -1,3 +1,12 @@
-<p>
-  page-not-found works!
-</p>
+<ng-container *ngIf="movie">
+
+    <app-video-player
+        [movie]="movie"
+        class="mr-3 float-left"
+        (status)="handleStatus($event)">
+    </app-video-player>
+
+    <p> {{playerStatus}} </p>
+
+</ng-container>
+
