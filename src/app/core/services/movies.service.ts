@@ -18,8 +18,7 @@ export class MoviesService {
 
   async fetchPromoMovies(){
     const movies = await this.fetchMovies();
-    movies.length = 3;
-    return movies;
+    return movies.slice(0,3);
   }
 
   async fetchMovieById(movieId: string){
