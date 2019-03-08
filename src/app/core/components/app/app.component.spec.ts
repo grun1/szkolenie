@@ -24,10 +24,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  fit(`should have as title 'movies'`, () => {
+  it(`should have as title 'movies'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Movies');
+    expect(app.title).toEqual('movies');
   });
 
 
