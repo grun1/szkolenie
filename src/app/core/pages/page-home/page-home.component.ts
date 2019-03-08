@@ -10,13 +10,20 @@ import { MovieList } from 'src/app/core/interfaces/movie-list.interface';
 export class PageHomeComponent  {
 
   movies: MovieList = null;
+  debugElement: any;
 
   constructor(
     private moviesService: MoviesService
   ) { }
 
   async ngOnInit() {
-    this.movies = await this.moviesService.fetchPromoMovies();
+    console.log('ngonInit');
+
+    this.movies = await this.getPromoMovies();
+  }
+
+  async getPromoMovies(){
+    return await this.moviesService.fetchPromoMovies();
   }
 
   addNumbers(a,b){

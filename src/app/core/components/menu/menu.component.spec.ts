@@ -24,6 +24,10 @@ describe('MenuComponent', () => {
     fixture.detectChanges();
   });
 
+  afterEach (()=> {
+    fixture.debugElement.nativeElement.remove();
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
